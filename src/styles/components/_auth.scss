@@ -2,7 +2,11 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: $primary;
+    // background-color: $primary;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     margin: 0px;
     height: 100vh;
     width: 100vw;
@@ -14,6 +18,16 @@
     border-radius: 2px;
     padding: 20px;
     width: 250px;
+
+    // background-color: rgba( 66, 64, 235, 0.35 );
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // backdrop-filter: blur( 0.5px );
+    // -webkit-backdrop-filter: blur( 0.5px );
+    // border-radius: 10px;
+    // border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    // padding: 20px;
+    // width: 250px;
 }
 
 .auth__title{
@@ -51,9 +65,12 @@
 .auth__alert-error{
     background-color: red;
     border-radius: 5px;
+    box-shadow: 7px 5px 15px 5px rgba(255,156,23,0.22);
     color: white;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     margin-bottom: 10px;
+    opacity: 0.8;
     padding: 5px;
 }
