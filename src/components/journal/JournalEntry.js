@@ -1,26 +1,40 @@
 import React from 'react'
+import dayjs from "dayjs";
+import { useDispatch } from 'react-redux';
+import { activeNote } from '../../actions/notes';
+// advancedFormat permite usar la fecha ordinal entre otras opciones
+const advancedFormat = require("dayjs/plugin/advancedFormat");
+dayjs.extend(advancedFormat);
 
-export const JournalEntry = () => {
+export const JournalEntry = ({id,date,title,body,url}) => {
+    const day = dayjs(date);
+    const dispatch = useDispatch();
+
+    const handleEntryClick = () => {
+        dispatch(activeNote(id,{id,date,title,body,url}));
+    }
+
     return (
-        <div className="journal__entry pointer">
-            <div 
+        <div className="journal__entry pointer animate__animated animate__fadeIn animate__fast" onClick={ handleEntryClick }>
+            {url &&
+                <div 
                 className="journal__entry-picture"
                 style={{
                     backgroundSize:'cover',
-                    backgroundImage: 'url(https://static.dw.com/image/52649694_303.jpg)'
-                }}>
-            </div>
+                    backgroundImage: `url(${url})`
+                }}></div>
+            }
             <div className="journal__entry-body">
                 <p className="journal__entry-title">
-                    Un nuevo dia
+                    {title}
                 </p>
                 <p className="journal__entry-content">
-                Se entiende por texto una composición ordenada de signos inscritos en un sistema de escritura. 
+                    { body }
                 </p>
             </div>
             <div className="journal__entry-date-box">
-                <span>Monday</span>
-                <h4>28</h4>
+                <span>{day.format("dddd")}</span>
+                <h4>{day.format("Do")}</h4>
             </div>
         </div>
     )

@@ -26,7 +26,6 @@ export const RegisterScreen = () => {
         if (isFormValid()) {
             dispatch(startRegisterEmailPassword(email,password,name))
         }
-        // console.log(name, email, password, password2);
     }
 
     const isFormValid = () =>{
@@ -48,7 +47,7 @@ export const RegisterScreen = () => {
     }
     
     return (
-        <div>
+        <div className="animate__animated animate__fadeIn animate__fast">
             <h3 className="auth__title">Register Screen</h3>
             { msgError && 
             <div className="auth__alert-error">
