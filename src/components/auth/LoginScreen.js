@@ -13,8 +13,10 @@ export const LoginScreen = () => {
     const { msgError,loading } = useSelector(state => state.ui);
 
     const [formValues,handleInputChange ] = useForm({
-        email: 'nando@gmail.com',
-        password: 'contramuysegura333'
+        email: '',
+        password: ''
+        // email: 'nando@gmail.com',
+        // password: 'contramuysegura333'
     });
 
     const {email, password} = formValues;
@@ -32,10 +34,10 @@ export const LoginScreen = () => {
 
     const isFormValid = () => {
         if(!validator.isEmail(email)){
-            dispatch(setError('Email is not valid'));
+            dispatch(setError('Email no es valido'));
             return false;
         }else if(password.trim().length < 5){
-            dispatch(setError('Passwords must be at least 5 characters'));
+            dispatch(setError('La contraseña debe ser de almenos 5 caracteres'));
             return false;
         }
         dispatch(removeError());
@@ -72,7 +74,7 @@ export const LoginScreen = () => {
                     Login
                 </button>
                 <div className="auth__social-networks">
-                    <p>Login with Social Networks</p>
+                    <p>Iniciar sesion con redes sociales</p>
                     <div
                         className="google-btn"
                         onClick= {handleGoogleLogin}
@@ -86,7 +88,8 @@ export const LoginScreen = () => {
                     </div>
                 </div>
                 <Link to="/auth/register"
-                        className="link">Create new account</Link>
+                        className="link">Crear una cuenta nueva</Link>
+                        
             </form>
         </div>
     )

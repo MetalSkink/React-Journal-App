@@ -13,10 +13,14 @@ export const RegisterScreen = () => {
     const {msgError} = useSelector(state => state.ui)
 
     const [formValues,handleInputChange ] = useForm({
-        name: 'Steve',
-        email: 'nando@gmail.com',
-        password: 'contramuysegura333',
-        password2: 'contramuysegura333'
+        name: '',
+        email: '',
+        password: '',
+        password2: ''
+        // name: 'Steve',
+        // email: 'nando@gmail.com',
+        // password: 'contramuysegura333',
+        // password2: 'contramuysegura333'
     });
 
     const {name, email, password, password2} = formValues;
@@ -30,16 +34,16 @@ export const RegisterScreen = () => {
 
     const isFormValid = () =>{
         if(name.trim().length === 0){
-            dispatch(setError('Name is required'));
+            dispatch(setError('El nombre es requerido'));
             return false;
         } else if ( !validator.isEmail(email) ){
-            dispatch(setError('Email is not valid'));
+            dispatch(setError('Email no es valido'));
             return false;
         }else if ( password !== password2 ){
-            dispatch(setError('Passwords dont match'));
+            dispatch(setError('Las contraseñas no coinciden'));
             return false;
         }else if ( password.trim().length < 5 ){
-            dispatch(setError('Passwords must be at least 5 characters'));
+            dispatch(setError('Las constraseñas deben ser de almenos 5 caracteres'));
             return false;
         }
         dispatch(removeError());

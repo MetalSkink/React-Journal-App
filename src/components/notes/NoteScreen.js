@@ -37,6 +37,7 @@ export const NoteScreen = () => {
                     type="text"
                     placeholder="A great power"
                     className="notes__title-input"
+                    autoComplete="off"
                     name="title"
                     value={title}
                     onChange={ handleInputChange }/>
@@ -57,7 +58,8 @@ export const NoteScreen = () => {
             <button
                 className="btn btn-danger"
                 onClick={handleDelete}>
-                    Delete
+                    <i class="fas fa-trash"></i>
+                    Borrar entrada
             </button>
         </div>
     )

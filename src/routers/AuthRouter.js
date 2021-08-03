@@ -17,6 +17,17 @@ export const AuthRouter = () => {
                     <Redirect to="/auth/login"></Redirect>
                 </Switch>
             </div>
+            <div className="helper">
+                <h2>Ayuda:</h2>
+                <p>
+                    <strong>
+                    Puedes crearte una cuenta, logearte con la cuenta de prueba o tambien logearte con tu cuenta de google
+                    <br/>
+                    </strong>
+                    Correo: nando@gmail.com<br/>
+                    Password: contramuysegura333 
+                </p>
+            </div>
         </div>
     )
 }

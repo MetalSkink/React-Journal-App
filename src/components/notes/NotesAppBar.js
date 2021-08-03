@@ -37,12 +37,14 @@ export const NotesAppBar = () => {
             <div>
                 <button className="btn"
                         onClick={handlePictureUpload}>
-                    Picture
+                    <i class="fas fa-camera"></i>
+                    Subir imagen
                 </button>
                 <button 
                     className="btn"
                     onClick={handleSave}>
-                    Save
+                    <i class="far fa-save"></i>
+                    Guardar
                 </button>
             </div>
         </div>
