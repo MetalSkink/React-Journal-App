@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/React-Journal-App/static/css/main.8b4ba199.chunk.css",
-    "main.js": "/React-Journal-App/static/js/main.5a27f163.chunk.js",
-    "main.js.map": "/React-Journal-App/static/js/main.5a27f163.chunk.js.map",
+    "main.css": "/React-Journal-App/static/css/main.648c9671.chunk.css",
+    "main.js": "/React-Journal-App/static/js/main.10efda84.chunk.js",
+    "main.js.map": "/React-Journal-App/static/js/main.10efda84.chunk.js.map",
     "runtime-main.js": "/React-Journal-App/static/js/runtime-main.44bbd376.js",
     "runtime-main.js.map": "/React-Journal-App/static/js/runtime-main.44bbd376.js.map",
     "static/js/2.d53f6a60.chunk.js": "/React-Journal-App/static/js/2.d53f6a60.chunk.js",
     "static/js/2.d53f6a60.chunk.js.map": "/React-Journal-App/static/js/2.d53f6a60.chunk.js.map",
     "index.html": "/React-Journal-App/index.html",
-    "static/css/main.8b4ba199.chunk.css.map": "/React-Journal-App/static/css/main.8b4ba199.chunk.css.map",
+    "static/css/main.648c9671.chunk.css.map": "/React-Journal-App/static/css/main.648c9671.chunk.css.map",
     "static/js/2.d53f6a60.chunk.js.LICENSE.txt": "/React-Journal-App/static/js/2.d53f6a60.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.44bbd376.js",
     "static/js/2.d53f6a60.chunk.js",
-    "static/css/main.8b4ba199.chunk.css",
-    "static/js/main.5a27f163.chunk.js"
+    "static/css/main.648c9671.chunk.css",
+    "static/js/main.10efda84.chunk.js"
   ]
 }
